@@ -1,0 +1,62 @@
+:root {
+    --desktop-width: 70%;
+    --mobile-width: 90%;
+}
+
+.site-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .content-wrapper {
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: var(--mobile-width);
+            margin: 0 auto;
+            margin-top: 3em;
+            margin-bottom: 3em;
+            text-align: center;
+            row-gap: 1em;
+            @include mq {
+                width: var(--desktop-width);
+            }
+            
+        }
+        .category-photos {
+            display:flex;
+            flex-direction: column;
+            flex-grow: 3;
+            flex-wrap: wrap;
+            img {
+                flex: 1;
+                height: 400px;
+                max-width: 100%;
+                object-fit: cover;
+            }
+
+            @include mq {
+                flex-direction: row;
+            }
+        }
+        .photos-wrapper {
+            display: grid;
+            box-sizing: border-box;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 100px;
+            gap: 0px 0px;
+            grid-template-areas:
+              "one-photo second-photo"
+              "one-photo third-photo";
+          @include mq {
+            grid-template-rows: 200px 200px;
+
+          }
+          .one-photo { grid-area: one-photo; }
+          .second-photo { grid-area: second-photo; }
+          .third-photo { grid-area: third-photo; }
+        }
+    }
+}
+

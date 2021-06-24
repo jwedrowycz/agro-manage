@@ -1,0 +1,21 @@
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: $black;
+    color: $l-pink;
+    padding: 2rem;
+    
+    @include mq {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    //     grid-template-rows: 1fr;
+    //     gap: 10em;
+        padding: 3rem 12rem;
+    }
+    h3 {
+        // font-size: 2.5rem;
+        font-weight: $fw-regular;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}

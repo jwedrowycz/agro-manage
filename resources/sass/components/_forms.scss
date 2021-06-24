@@ -1,0 +1,19 @@
+.form-input {
+    margin-bottom: 2em;
+    padding: .7rem .5rem;
+    background: $l-pink;
+    border: none;
+    width: 100%;
+    transition: all .25s ease-in-out;
+    &:focus {
+        border: none;
+        background: $d-pink;
+
+    }
+
+}
+
+textarea.form-input {
+    height: 150px;
+}
+

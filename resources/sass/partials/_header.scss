@@ -1,0 +1,124 @@
+.navbar-wrapper {
+    padding: 2em 1em 1em 1em;
+    font-size: 1.2rem;
+    border-bottom: 2px solid $red;
+    @include mq {
+        padding: 1.5em;
+    }
+    ul {
+        margin: 1rem 0 0 0;
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        z-index: 999;
+        @include mq {
+            width: 40%;
+            display: flex;
+            z-index: 0;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        &.active {
+            display: flex;
+            // background: $black;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            border-bottom: 2px solid $red;
+            
+        }
+
+        li {
+            margin-bottom: 1em;
+            list-style: none;
+            text-align: center;
+            border: transparent 1px solid;
+            transition: all .25s ease-in-out;
+            @include mq {
+                padding: 1em;
+                margin:  0;
+            }
+            a {
+                color: $red;
+                text-decoration: none;
+                font-weight: $fw-bold;
+                width: 100%;
+                transition: .25s;
+                &:hover, &:active {
+                    // border: 1px solid $l-pink;
+                    color: $red-dk;
+                }
+            }
+        }
+    }   
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+    @include mq {
+        display: none;
+    }
+
+    .bar {
+        height: 3px;
+        width: 100%;
+        background-color: $l-pink;
+        border-radius: 10px;
+    }
+}
+
+
+.hero-wrapper {
+    position: relative;
+    margin-bottom: -10px;
+    img {
+        max-width: 100%;
+        height: 400px;
+        object-fit: cover;
+
+        @include mq {
+            height: auto;
+        }
+    }
+
+    .hero-text-wrapper {
+        position: absolute;
+        color: $l-pink;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        .hero-text {
+            h1 {
+                font-size: 2.5rem;
+                @include mq {
+                    font-size: 8rem;
+                }
+                padding-bottom: 1rem;
+                border-bottom: 2px solid $l-pink;
+            }
+            h2 {
+                padding-top: 1rem;
+                font-size: 1.2rem;
+                @include mq {
+                    font-size: 2rem;
+                }                
+            }
+        }        
+    }
+}
+
